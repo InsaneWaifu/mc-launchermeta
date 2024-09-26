@@ -29,6 +29,7 @@ use crate::VersionKind;
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Serialize)]
 pub struct Argument {
     pub rules: Vec<Rule>,
+    #[serde(rename="value")]
     pub values: Vec<String>,
 }
 

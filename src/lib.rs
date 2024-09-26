@@ -35,6 +35,8 @@ pub mod version_manifest;
 /// The current URL to get the version manifest from.
 pub const VERSION_MANIFEST_URL: &str =
     "https://launchermeta.mojang.com/mc/game/version_manifest.json";
+pub const ASSET_BASE_PATH: &str = 
+    "https://resources.download.minecraft.net/";
 
 /// Type of Minecraft versions
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Hash, Serialize, Deserialize)]

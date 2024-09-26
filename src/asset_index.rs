@@ -10,8 +10,9 @@ use serde::{Deserialize, Serialize};
 /// Information about assets used by the game
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Serialize, Deserialize)]
 pub struct AssetIndex {
-    pub objects: Vec<Object>,
-    pub map_to_resources: bool,
+    #[serde(with = "tuple_vec_map")]
+    pub objects: Vec<(String, Object)>,
+    pub map_to_resources: Option<bool>,
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Serialize, Deserialize)]
